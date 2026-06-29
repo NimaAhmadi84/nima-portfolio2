@@ -11,6 +11,7 @@
     <link href="{{ asset('assets/bootstrap-5.3.8/css/bootstrap.rtl.min.css') }}" rel="stylesheet">
 </head>
 <body class="d-flex flex-column min-vh-100">
+    <x-navbar />
     <main class="flex-grow-1 container py-4">
         @yield('content')
     </main>
