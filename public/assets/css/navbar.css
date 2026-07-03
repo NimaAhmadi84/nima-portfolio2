@@ -1,0 +1,178 @@
+/* ===== متغیرها ===== */
+:root {
+    --nav-primary: #0d6efd;
+    --nav-primary-dark: #0b5ed7;
+    --nav-text: #2b2f38;
+    --nav-text-muted: #6c757d;
+}
+
+/* ===== ساختار نوبار ===== */
+.navbar-custom {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+/* ===== لوگو ===== */
+.navbar-brand-custom {
+    font-weight: 800 !important;
+    background: linear-gradient(135deg, var(--nav-primary), #6610f2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.5px;
+    transition: transform 0.25s ease;
+}
+
+.navbar-brand-custom:hover {
+    transform: scale(1.03);
+}
+
+/* ===== آیتم‌های منو ===== */
+.nav-link-custom {
+    position: relative;
+    color: var(--nav-text) !important;
+    padding: 0.5rem 1rem !important;
+    margin: 0 0.15rem;
+    border-radius: 8px;
+    transition: color 0.25s ease, background-color 0.25s ease;
+}
+
+.nav-link-custom::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    right: 50%;
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--nav-primary), #6610f2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link-custom:hover {
+    color: var(--nav-primary) !important;
+    background-color: rgba(13, 110, 253, 0.06);
+}
+
+.nav-link-custom:hover::after,
+.nav-link-custom.active::after {
+    width: 60%;
+    right: 20%;
+}
+
+.nav-link-custom.active {
+    color: var(--nav-primary) !important;
+    font-weight: 700;
+}
+
+/* ===== دکمه تم (مود شب) ===== */
+/* ===== کلید کشویی تم (Toggle Switch) ===== */
+.theme-toggle-switch {
+    position: relative;
+    width: 56px;
+    height: 30px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #495057, #212529);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: not-allowed;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    opacity: 0.7;
+    overflow: hidden;
+}
+
+.theme-toggle-switch .toggle-icons {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7px;
+    font-size: 0.8rem;
+    pointer-events: none;
+}
+
+.theme-toggle-switch .toggle-circle {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+}
+
+/* حالت روشن (وقتی بعداً فعالش کردی و کلاس .is-light گرفت) */
+.theme-toggle-switch.is-light {
+    background: linear-gradient(135deg, #a8d8ff, #74c0fc);
+}
+
+.theme-toggle-switch.is-light .toggle-circle {
+    right: 31px;
+}
+
+/* ===== دکمه اصلی CTA ===== */
+.btn-cta-custom {
+    background: linear-gradient(135deg, var(--nav-primary), #6610f2);
+    border: none;
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(13, 110, 253, 0.3);
+    transition: all 0.25s ease;
+}
+
+.btn-cta-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(13, 110, 253, 0.4);
+    filter: brightness(1.05);
+}
+
+/* ===== دکمه همبرگری ===== */
+.navbar-toggler-custom {
+    padding: 0.35rem 0.5rem;
+}
+
+.navbar-toggler-custom:focus {
+    box-shadow: none;
+}
+
+/* ===== ریسپانسیو موبایل ===== */
+@media (max-width: 991px) {
+    .nav-link-custom::after {
+        display: none;
+    }
+
+    .nav-link-custom {
+        text-align: center;
+        margin: 0.15rem 0;
+    }
+
+    .navbar-collapse {
+        background: #fff;
+        border-radius: 12px;
+        margin-top: 0.75rem;
+        padding: 1rem;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .d-flex.align-items-center.gap-2 {
+        justify-content: center;
+        margin-top: 0.75rem;
+        padding-top: 0.75rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
+    }
+}
