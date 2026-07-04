@@ -9,6 +9,7 @@
     
     {{-- Bootstrap 5.3.8 RTL CSS --}}
     <link href="{{ asset('assets/bootstrap-5.3.8/css/bootstrap.rtl.min.css') }}" rel="stylesheet">
+     @stack('styles')
 </head>
 <body class="d-flex flex-column min-vh-100">
     <x-navbar />

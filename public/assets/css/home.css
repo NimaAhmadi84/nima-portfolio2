@@ -1,0 +1,69 @@
+/* ===== Hero Section ===== */
+.hero-section {
+    min-height: calc(100vh - 76px);
+    display: flex;
+    align-items: center;
+    padding: 3rem 0;
+    background-color: #f8fafc;
+}
+
+/* ===== Gradient Text ===== */
+.text-gradient-primary {
+    background: linear-gradient(135deg, #0d6efd, #6610f2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ===== Profile Card ===== */
+.profile-card {
+    max-width: 400px;
+    border-radius: 1.5rem;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.15);
+}
+
+.avatar-circle {
+    background: linear-gradient(135deg, #0d6efd, #6610f2);
+    box-shadow: 0 8px 25px rgba(13, 110, 253, 0.4);
+}
+
+/* ===== Custom Badge ===== */
+.badge-skill {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    background-color: #f1f5f9 !important;
+    color: #475569;
+    border-radius: 2rem;
+}
+
+/* ===== Hero Buttons ===== */
+.btn-hero {
+    padding: 1rem 2.5rem;
+    font-weight: 600;
+    font-size: 1.05rem;
+    border-radius: 0.875rem;
+    transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 991px) {
+    .hero-section {
+        text-align: center;
+    }
+    
+    .btn-hero {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
