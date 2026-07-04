@@ -18,16 +18,16 @@
             {{-- آیتم‌های منو --}}
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link nav-link-custom fw-medium active" href="#home">خانه</a>
+                    <a class="nav-link nav-link-custom fw-medium active" href="/">خانه</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-custom fw-medium" href="#about">درباره من</a>
+                    <a class="nav-link nav-link-custom fw-medium" href="/about">درباره من</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-custom fw-medium" href="#skills">مهارت‌ها</a>
+                    <a class="nav-link nav-link-custom fw-medium" href="/skills">مهارت‌ها</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-custom fw-medium" href="#projects">نمونه‌کارها</a>
+                    <a class="nav-link nav-link-custom fw-medium" href="/projects">نمونه‌کارها</a>
                 </li>
             </ul>
 
